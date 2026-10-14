@@ -2,11 +2,15 @@
 
 A [Tern](https://stencil.so/tern) plugin that reminds you to touch your security key (YubiKey, Nitrokey, SoloKey…) when a command that signs with it starts. With `commit.gpgsign = true`, every commit waits for that touch, and it is easy to sit there wondering why `git commit` hangs.
 
-When you run a signing command in a Tern pane, a toast appears at the bottom of the window:
+When you run a signing command in a Tern pane, a toast appears at the bottom of the window while git waits for the key:
 
-> ⓘ **Touch your security key** · `git commit -m "fix parser"`
+![A git commit waiting in a Tern pane, with the toast "Touch your security key" and the command beneath it](docs/reminder.png)
 
-If the command then fails, a second toast says so, in case the signature was the reason. Per folder, you can also turn on a sound or turn the reminder off.
+If the command then fails, a second toast says so, in case the signature was the reason:
+
+![The same commit after "gpg failed to sign the data", with the error toast "Command failed — if it was signing, check your key"](docs/failure.png)
+
+Per folder, you can also turn on a sound or turn the reminder off.
 
 ## Install
 
