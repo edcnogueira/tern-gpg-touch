@@ -1,0 +1,6 @@
+schema = 1
+id = "gpg-touch"
+name = "GPG Touch"
+version = "0.1.0"
+description = "Reminds you to touch your security key when a signed git commit starts."
+host = "host.luau"
